@@ -12,15 +12,15 @@ The main purpose is to help Dynamics CRM customizers to save time during the dat
 The tool can be installed as Excel add-in following a simple installation process, new ribbon commands will be added in Excel providing easy access to all the main operations. 
 In an Excel sheet is possible to load entity attributes , views and forms that can be used for documentation and tracking, in top of that is possible to customize attributes and views with a simple process that allows to create and update multiple objects at the same time.
 
-
+![Screenshot](/Images/crmcustexceltool.png)
 
 # Key Features
-Get all the entity attributes
-Get all the attributes shown in a form
-Get a list of views and all the columns
-Add new fields (Text, Decimal, Lookup,.. )
-Update single or multiple attributes at the same time
-Edit CRM view columns
-Edit attributes display name in different languages
-Load entity customizations from CRM Solutions
-Edit Option set values , labels and order
+- Get all the entity attributes
+- Get all the attributes shown in a form
+- Get a list of views and all the columns
+- Add new fields (Text, Decimal, Lookup,.. )
+- Update single or multiple attributes at the same time
+- Edit CRM view columns
+- Edit attributes display name in different languages
+- Load entity customizations from CRM Solutions
+- Edit Option set values , labels and order
