@@ -4,6 +4,12 @@ Copied from https://archive.codeplex.com/?p=crmcustomizationtoolforexcel Licence
 This excel add-in helps to customize Dynamics CRM 2013, 2015 and 2016 up to update 8.2.x. 
 Attributes can be viewed and created in excel sheets increasing the customization productivity.
 
+# What has changed in this version
+
+v.1.0.0.1: 
+- Changes will now be published under the selected solution
+- Nuget packes and XrmTooling Login Control updated to the latest 8.x version. 
+
 # Original Description from Codeplex
 Dynamics CRM Customization Tool For Excel is an update of "CRM 2011 Excel Data Model Add-in" that works for Dynamics CRM 2013 and 2015. 
 
