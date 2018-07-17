@@ -1,0 +1,60 @@
+﻿<Window x:Class="DynamicsCRMCustomizationToolForExcel.AddIn.ConfirmCustomization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:DynamicsCRMCustomizationToolForExcel.AddIn.Components"
+        BorderThickness="1" 
+        BorderBrush="#173561"
+        Title="CRM " Width="750" Height="600"
+        ResizeMode="NoResize" 
+        SizeToContent="Height"
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None"
+        AllowsTransparency="True" 
+        Loaded="Window_Loaded">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Microsoft.Xrm.Tooling.Ui.Styles;component/Resources/Button/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <local:BoolToImageConverter x:Key="formatter"/>
+        </ResourceDictionary>
+    </Window.Resources>
+    <DockPanel  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="20,20" >
+        <Label x:Name="btnLoginLabel" Content="Confirm The Following Customizations :" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" DockPanel.Dock="Top" FontWeight="Bold" FontSize="14"  />
+        <ListView  DockPanel.Dock="Top" x:Name="lstOperationsList"  HorizontalAlignment="Stretch" Height="400" Width="Auto"  VerticalAlignment="Stretch" MinHeight="250" >
+            <ListView.View>
+                <GridView  x:Name="grdOperationsList" >
+                    <GridView.Columns>
+                        <GridViewColumn Header="Execute" Width="50">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox Name="chkSiteId" IsChecked="{Binding Path=executeOperation ,Mode=TwoWay}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=operationType}" Header="Type" Width="75"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=opertionTarget}" Header="Target" Width="200"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=previewString}" Header="Operation" Width="375" />
+
+                        <GridViewColumn Header="Succeded" Width="0" >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding Path=operationSucceded, Converter={StaticResource formatter}}" Height="11" Width="16" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=exceptionString}" Header="Exception"  Width="0"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        
+        <ProgressBar x:Name="prbCrmOperationStatus" DockPanel.Dock="Top" Height="30" Maximum="100"  Minimum="0" Margin="10,10,10,10" Visibility="Hidden"/>
+
+        <UniformGrid DockPanel.Dock="Top" Margin="10" Rows="1" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Button DockPanel.Dock="Right" Content="Confirm"  Width="100" HorizontalAlignment="Right" Name="btnConfirm" Margin="10,0,10,0" Click="btnConfirm_Click"  />
+            <Button DockPanel.Dock="Right" Content="Exit" Width="100"  HorizontalAlignment="Right" Name="btnExit" Click="btnExit_Click" />
+        </UniformGrid>
+        
+    </DockPanel>
+</Window>
