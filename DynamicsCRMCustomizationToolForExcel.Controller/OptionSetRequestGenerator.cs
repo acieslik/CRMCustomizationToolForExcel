@@ -192,7 +192,7 @@ namespace DynamicsCRMCustomizationToolForExcel.Controller
                          Value = valueresult
                      };
                 }
-                crmOp.Add(new CrmOperation(CrmOperation.CrmOperationType.create, CrmOperation.CrmOperationTarget.optionSet, updateOptionValueRequest, string.Format("Update OptionSet {0}", row[ExcelColumsDefinition.OPTIONSETLABELEXCELCOL])));
+                crmOp.Add(new CrmOperation(CrmOperation.CrmOperationType.update, CrmOperation.CrmOperationTarget.optionSet, updateOptionValueRequest, string.Format("Update OptionSet {0}", row[ExcelColumsDefinition.OPTIONSETLABELEXCELCOL])));
             }
             return true;
         }
