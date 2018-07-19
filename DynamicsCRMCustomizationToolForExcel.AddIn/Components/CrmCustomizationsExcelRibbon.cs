@@ -66,7 +66,7 @@ namespace DynamicsCRMCustomizationToolForExcel.AddIn
         {
             if (GlobalOperations.Instance.ExcelOperations.IsEditing())
             {
-                MessageBox.Show("Plesea exit from edit-mode", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please exit from edit-mode", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             ConfirmCustomization confirm = new ConfirmCustomization();
@@ -78,9 +78,10 @@ namespace DynamicsCRMCustomizationToolForExcel.AddIn
         {
             if ( GlobalOperations.Instance.ExcelOperations.IsEditing())
             {
-                MessageBox.Show("Plesea exit from edit-mode", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please exit from edit-mode", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+
             GlobalOperations.Instance.RefreshCurrentSheet();
         }
 
@@ -135,9 +136,26 @@ namespace DynamicsCRMCustomizationToolForExcel.AddIn
             //}
         }
 
-        private void btnPublishAll_Click(object sender, RibbonControlEventArgs e)
+        private async void btnPublishAll_Click(object sender, RibbonControlEventArgs e)
         {
-            GlobalOperations.Instance.CRMOpHelper.publishRequest();
+            Loading loading = new Loading();
+            loading.LabelText.Content = "Publishing...";
+            loading.Show();
+
+            Task work = ProcessAction(loading, GlobalOperations.Instance.CRMOpHelper.publishRequest);
+
+            await work;
+        }
+
+        async Task ProcessAction(System.Windows.Window w, System.Action a)
+        {
+            await Task.Run(() => {
+                a();
+                Globals.DynamicsCRMExcelAddIn.SyncContext.Post(new System.Threading.SendOrPostCallback((o) => {
+                    w.Close();
+                }), null);
+        });
+            
         }
     }
 }

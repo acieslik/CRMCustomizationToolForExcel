@@ -8,6 +8,7 @@ using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Excel;
 using DynamicsCRMCustomizationToolForExcel.Controller;
 using Microsoft.Office.Tools;
+using System.Threading;
 
 namespace DynamicsCRMCustomizationToolForExcel.AddIn
 {
@@ -22,6 +23,8 @@ namespace DynamicsCRMCustomizationToolForExcel.AddIn
             }
         }
 
+        public SynchronizationContext SyncContext { get; set; }
+
 
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
@@ -30,6 +33,9 @@ namespace DynamicsCRMCustomizationToolForExcel.AddIn
             this._MainPanel = this.CustomTaskPanes.Add(taskPaneControl, "CRM Entities List");
             this._MainPanel.Width = 300;
             this._MainPanel.Visible = false;
+
+            SyncContext = SynchronizationContext.Current;
+
         }
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
