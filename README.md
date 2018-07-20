@@ -10,6 +10,7 @@ v.1.0.0.1:
 - Changes will now be published under the selected solution
 - Nuget packes and XrmTooling Login Control updated to the latest 8.x version.
   - Support for Dynamics 365 Update 8.2.x
+- Download ![Download and install addin](https://github.com/acieslik/CRMCustomizationToolForExcel/raw/master/Builds/1.0.0.1/Debug.zip)
 
 # Original Description from Codeplex
 Dynamics CRM Customization Tool For Excel is an update of "CRM 2011 Excel Data Model Add-in" that works for Dynamics CRM 2013 and 2015. 
