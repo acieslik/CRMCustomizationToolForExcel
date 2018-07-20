@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicsCRMCustomizationToolForExcel.AddIn", "DynamicsCRMCustomizationToolForExcel.AddIn\DynamicsCRMCustomizationToolForExcel.AddIn.csproj", "{969EE89F-7480-4F49-B08F-195A121B7257}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicsCRMCustomizationToolForExcel.Model", "DynamicsCRMCustomizationToolForExcel.Model\DynamicsCRMCustomizationToolForExcel.Model.csproj", "{88D18D93-7BAE-4BB7-9DB7-6EB14FF5FFD7}"
@@ -9,22 +11,43 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicsCRMCustomizationToo
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
 		Debug|Any CPU = Debug|Any CPU
+		DVD-5|Any CPU = DVD-5|Any CPU
 		Release|Any CPU = Release|Any CPU
+		SingleImage|Any CPU = SingleImage|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{969EE89F-7480-4F49-B08F-195A121B7257}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{969EE89F-7480-4F49-B08F-195A121B7257}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
 		{969EE89F-7480-4F49-B08F-195A121B7257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{969EE89F-7480-4F49-B08F-195A121B7257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{969EE89F-7480-4F49-B08F-195A121B7257}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{969EE89F-7480-4F49-B08F-195A121B7257}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
 		{969EE89F-7480-4F49-B08F-195A121B7257}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{969EE89F-7480-4F49-B08F-195A121B7257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{969EE89F-7480-4F49-B08F-195A121B7257}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{969EE89F-7480-4F49-B08F-195A121B7257}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{88D18D93-7BAE-4BB7-9DB7-6EB14FF5FFD7}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{88D18D93-7BAE-4BB7-9DB7-6EB14FF5FFD7}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
 		{88D18D93-7BAE-4BB7-9DB7-6EB14FF5FFD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{88D18D93-7BAE-4BB7-9DB7-6EB14FF5FFD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88D18D93-7BAE-4BB7-9DB7-6EB14FF5FFD7}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{88D18D93-7BAE-4BB7-9DB7-6EB14FF5FFD7}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
 		{88D18D93-7BAE-4BB7-9DB7-6EB14FF5FFD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88D18D93-7BAE-4BB7-9DB7-6EB14FF5FFD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88D18D93-7BAE-4BB7-9DB7-6EB14FF5FFD7}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{88D18D93-7BAE-4BB7-9DB7-6EB14FF5FFD7}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{5B17F065-9190-40D5-8720-F573512FD85E}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{5B17F065-9190-40D5-8720-F573512FD85E}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
 		{5B17F065-9190-40D5-8720-F573512FD85E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5B17F065-9190-40D5-8720-F573512FD85E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B17F065-9190-40D5-8720-F573512FD85E}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B17F065-9190-40D5-8720-F573512FD85E}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
 		{5B17F065-9190-40D5-8720-F573512FD85E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B17F065-9190-40D5-8720-F573512FD85E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B17F065-9190-40D5-8720-F573512FD85E}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{5B17F065-9190-40D5-8720-F573512FD85E}.SingleImage|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
